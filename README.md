@@ -8,8 +8,11 @@ The naming conventions for branches will be as follows:
 ## Commmits
 Regular and documented commits are expected of all developers working on this project.
 The naming conventions for commits will be as follows:
+
 - Slug: KeyWords
+
 The key words, or slugs, indicate what kind of change has been made. Here is a list:
+
 - Feat: commits adding, adjusting, or removing features
 - Fix: commits fixing a bug of a preceeded feat commit
 - Refactor: commits rewriting or restructuring code without altering behaviour outcomes
