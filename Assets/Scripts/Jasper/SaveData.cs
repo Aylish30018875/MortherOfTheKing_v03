@@ -1,18 +1,14 @@
 using UnityEngine;
 using System.IO;
+using System;
 
-public class DataToSave
-{
-    public int level;
-    public int currency;
-    public float completion;
-}
-
+[Serializable]
 public struct Name
 {
     public string fileName;
 }
 
+// save slot data
 public class SaveData : MonoBehaviour
 {
     private string saveSlotPath;
@@ -20,16 +16,16 @@ public class SaveData : MonoBehaviour
     void Awake()
     {
         saveSlotPath = $"{Application.streamingAssetsPath}/SaveSlotName.json";
-        CreateSaveSlotFile();
+        //CreateSaveSlotFile();
     }
 
-    void CreateSaveSlotFile()
-    {
-        if (!File.Exists(saveSlotPath))
-        {
-            File.WriteAllText(saveSlotPath, "Slot1");
-        }
-    }
+    //void CreateSaveSlotFile()
+    //{
+    //    if (!File.Exists(saveSlotPath))
+    //    {
+    //        File.WriteAllText(saveSlotPath, "Slot1");
+    //    }
+    //}
 
     public void SaveChosenSlot(string sN)
     {
@@ -40,5 +36,11 @@ public class SaveData : MonoBehaviour
             File.WriteAllText(saveSlotPath, lineToSave);
         }
     }
-    
 }
+
+#region Pseudocode
+// if slot 1 is clicked
+    // create file name = slot1
+    // set last loaded save
+
+#endregion

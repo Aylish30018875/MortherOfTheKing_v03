@@ -6,12 +6,12 @@ public class LoadData : MonoBehaviour
     public Name saveSlot;
     public string saveSlotPath;
 
-    void Start()
+    void Awake()
     {
-        Debug.Log(ReadSaveSlotName());
+        saveSlot = ReadSaveSlotName();
     }
 
-    public string ReadSaveSlotName()
+    public Name ReadSaveSlotName()
     {
         saveSlotPath = $"{Application.streamingAssetsPath}/SaveSlotName.json";
 
@@ -19,8 +19,8 @@ public class LoadData : MonoBehaviour
         {
             string loadedData = File.ReadAllText(saveSlotPath);
             saveSlot = JsonUtility.FromJson<Name>(loadedData);
-            return saveSlot.fileName;
+            return saveSlot;
         }
-        return "";
+        return new Name();
     }
 }
