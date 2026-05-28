@@ -466,6 +466,55 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &544748956
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 544748958}
+  - component: {fileID: 544748957}
+  m_Layer: 0
+  m_Name: TowerPlacer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &544748957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 544748956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 696e7c36252ab6f4f9261e3a08da2ca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TowerPlacer
+  placementMaps:
+  - {fileID: 1410510189}
+  nonPlacementMaps:
+  - {fileID: 628172355}
+  ghostPrefab: {fileID: 0}
+--- !u!4 &544748958
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 544748956}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.18814, y: -2.87953, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &555807783
 GameObject:
   m_ObjectHideFlags: 0
@@ -5403,13 +5452,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WaveManager
   waves:
-  - duration: 0
-    easyEnemies: 0
+  - duration: 5
+    easyEnemies: 3
+    hardEnemies: 0
+  - duration: 5
+    easyEnemies: 5
+    hardEnemies: 0
+  - duration: 5
+    easyEnemies: 10
     hardEnemies: 0
   startWaveButton: {fileID: 747722698}
   easyEnemyPrefab: {fileID: 658094497}
   hardEnemyPrefab: {fileID: 1246354443}
-  wayPoints: []
+  wayPoints:
+  - {fileID: 1403103460}
+  - {fileID: 555807784}
+  - {fileID: 293456574}
+  - {fileID: 1209604523}
+  - {fileID: 1030353740}
+  - {fileID: 65429877}
+  - {fileID: 1850146676}
+  - {fileID: 1933625509}
+  - {fileID: 1336816625}
+  - {fileID: 670647938}
   _currentWaveIndex: 0
   _isRunning: 0
 --- !u!114 &1408581494
@@ -6927,3 +6992,4 @@ SceneRoots:
   - {fileID: 1856828612}
   - {fileID: 5488321455279752932}
   - {fileID: 7681224231859275046}
+  - {fileID: 544748958}
