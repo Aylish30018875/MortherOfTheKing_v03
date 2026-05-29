@@ -17,7 +17,8 @@ public class TowerPlacer : MonoBehaviour
 
     private void Update()
     {
-
+        HandlePlacementHover();
+        HandlePlacementClick();
     }
     void HandlePlacementHover()
     {
