@@ -45,5 +45,8 @@ TagManager:
   - name: Tower
     uniqueID: 4165698721
     locked: 0
+  - name: PewPew
+    uniqueID: 4200222079
+    locked: 0
   m_RenderingLayers:
   - Default

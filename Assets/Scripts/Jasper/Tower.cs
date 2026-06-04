@@ -8,12 +8,15 @@ public class Tower : MonoBehaviour
     public GameObject projectilePrefab;
     public Transform firePoint;
 
-    private float fireCooldown;
+    public float fireCooldown;
 
     private void Update()
     {
-        fireCooldown -= Time.deltaTime;
         Enemy target = FindBestTarget();
+        if (target != null)
+        {
+            fireCooldown -= Time.deltaTime;
+        }
         if (target != null && fireCooldown <= 0)
         {
             Shoot(target);
@@ -42,7 +45,7 @@ public class Tower : MonoBehaviour
         return best;
     }
 
-    void Shoot (Enemy enemy)
+    void Shoot(Enemy enemy)
     {
         GameObject projectile = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
         Projectile pr = projectile.GetComponent<Projectile>();
