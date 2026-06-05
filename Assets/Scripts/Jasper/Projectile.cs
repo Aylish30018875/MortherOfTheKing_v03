@@ -4,7 +4,9 @@ public class Projectile : MonoBehaviour
 {
     public float speed = 8;
     public Transform target;
-
+    public PointsManager pointsManager;
+    int money;
+  
     private void Update()
     {
         if (target == null)
@@ -25,6 +27,7 @@ public class Projectile : MonoBehaviour
             if (e.health <= 0)
             {
                 Destroy(target.gameObject);
+                pointsManager.money += 10;
             }
             Destroy(gameObject);
         }

@@ -19,7 +19,7 @@ public class Enemy : MonoBehaviour
 
         transform.position += dir * speed * Time.deltaTime;
 
-        if (Vector3.Distance(transform.position, target.position) < 0.05f)
+        if (Vector3.Distance(transform.position, target.position) < 0.1f)
         {
             currentWayPoint++;
             if (currentWayPoint >= wayPoints.Length)
