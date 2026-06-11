@@ -4,9 +4,7 @@ public class Projectile : MonoBehaviour
 {
     public float speed = 8;
     public Transform target;
-    public PointsManager pointsManager;
-    int money;
-  
+
     private void Update()
     {
         if (target == null)
@@ -14,7 +12,7 @@ public class Projectile : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-        Vector3 direction = (target.position = transform.position).normalized;
+        Vector3 direction = (target.position - transform.position).normalized;
         transform.position += direction * speed * Time.deltaTime;
 
         float angle = Mathf.Atan2(direction.x, direction.y) * Mathf.Rad2Deg;
@@ -27,7 +25,6 @@ public class Projectile : MonoBehaviour
             if (e.health <= 0)
             {
                 Destroy(target.gameObject);
-                pointsManager.money += 10;
             }
             Destroy(gameObject);
         }

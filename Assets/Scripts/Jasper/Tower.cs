@@ -8,22 +8,18 @@ public class Tower : MonoBehaviour
     public GameObject projectilePrefab;
     public Transform firePoint;
 
-    public float fireCooldown;
+    private float fireCooldown;
 
     private void Update()
     {
+        fireCooldown -= Time.deltaTime;
         Enemy target = FindBestTarget();
-        if (target != null)
-        {
-            fireCooldown -= Time.deltaTime;
-        }
         if (target != null && fireCooldown <= 0)
         {
             Shoot(target);
             fireCooldown = 1 / fireRate;
         }
     }
-
     Enemy FindBestTarget()
     {
         Enemy[] enemies = GameObject.FindObjectsByType<Enemy>(FindObjectsSortMode.None);

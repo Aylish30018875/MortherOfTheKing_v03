@@ -42,7 +42,7 @@ public class TowerPlacer : MonoBehaviour
         Vector3 worldCenter = PrimaryPlacementMap().GetCellCenterWorld(cell);
         worldCenter.z = 0;
 
-        _ghostInstance.transform.position = worldCenter + new Vector3(0, PrimaryPlacementMap().cellSize.y * 0.25f);
+        _ghostInstance.transform.position = worldCenter + new Vector3(0, PrimaryPlacementMap().cellSize.y * 0.83f);
         _ghostInstance.GetComponent<GhostTower>().SetValid(IsValidPlacement(cell));
     }
 
