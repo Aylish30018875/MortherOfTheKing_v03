@@ -10,6 +10,10 @@ public class UpgradeManager : MonoBehaviour
 
     public GameObject towerPanel;
 
+    void Awake()
+    {
+        
+    }
 
     void Start()
     {
