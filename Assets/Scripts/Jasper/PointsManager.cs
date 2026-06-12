@@ -3,13 +3,13 @@ using UnityEngine.UI;
 
 public class PointsManager : MonoBehaviour
 {
-    public int money;
+    public int money = 10;
     public Text moneyDisplay;
     public string moneyDisplayString;
 
     void Update()
     {
-        moneyDisplayString = $"{money}";
+        moneyDisplayString = $"{money} coins";
         moneyDisplay.text = moneyDisplayString;
     }
 }

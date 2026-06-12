@@ -4,7 +4,12 @@ public class Projectile : MonoBehaviour
 {
     public float speed = 8;
     public Transform target;
+    private PointsManager pointsManager;
 
+    void Awake()
+    {
+        pointsManager = GameObject.FindGameObjectWithTag("Manager").GetComponent<PointsManager>();
+    }
     private void Update()
     {
         if (target == null)
@@ -25,6 +30,7 @@ public class Projectile : MonoBehaviour
             if (e.health <= 0)
             {
                 Destroy(target.gameObject);
+                pointsManager.money += 5;
             }
             Destroy(gameObject);
         }

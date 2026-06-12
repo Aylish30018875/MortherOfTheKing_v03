@@ -15,6 +15,13 @@ public class TowerPlacer : MonoBehaviour
     private HashSet<Vector3Int> _occupiedTiles = new HashSet<Vector3Int>();
     private GameObject _ghostInstance;
 
+    private PointsManager pointsManager;
+
+    void Awake()
+    {
+        pointsManager = GameObject.FindGameObjectWithTag("Manager").GetComponent<PointsManager>();
+    }
+
     private void Update()
     {
         HandlePlacementHover();
@@ -62,7 +69,7 @@ public class TowerPlacer : MonoBehaviour
         }
 
         Vector3Int cell = CellPosition();
-        if (!IsValidPlacement(cell))
+        if (!IsValidPlacement(cell) || pointsManager.money < 10)
         {
             return;
         }
@@ -88,6 +95,7 @@ public class TowerPlacer : MonoBehaviour
 
         TowerSelectionUI.selectedTowerPrefab = null;
         _occupiedTiles.Add(cell);
+        pointsManager.money -= 10;
     }
     
     Tilemap GetOwningPlacementMap(Vector3Int cell)
