@@ -5,6 +5,7 @@ public class Projectile : MonoBehaviour
     public float speed = 8;
     public Transform target;
     private PointsManager pointsManager;
+    public int damageNumber = 1;
 
     void Awake()
     {
@@ -26,7 +27,7 @@ public class Projectile : MonoBehaviour
         if (Vector2.Distance(transform.position, target.position) < 0.15f)
         {
             Enemy e = target.GetComponent<Enemy>();
-            e.health -= 1;
+            e.health -= damageNumber;
             if (e.health <= 0)
             {
                 Destroy(target.gameObject);

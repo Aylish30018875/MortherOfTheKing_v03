@@ -7,6 +7,8 @@ public class Tower : MonoBehaviour
     public float fireRate = 1;
     public GameObject projectilePrefab;
     public Transform firePoint;
+    public int damage;
+    public float speed;
 
     private float fireCooldown;
 
@@ -45,6 +47,8 @@ public class Tower : MonoBehaviour
     {
         GameObject projectile = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
         Projectile pr = projectile.GetComponent<Projectile>();
+        pr.damageNumber = damage;
+        pr.speed = speed;
         pr.target = enemy.transform;
     }
 }
