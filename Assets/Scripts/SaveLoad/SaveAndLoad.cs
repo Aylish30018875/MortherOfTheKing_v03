@@ -3,12 +3,12 @@ using System.IO;
 
 public class SaveAndLoad : MonoBehaviour
 {
-    string _filePath;
-    [SerializeField] SaveData _saveData;
+    //string _filePath;
+    //[SerializeField] SaveData _saveData;
 
     public void Start()
     {
-        _filePath = $"{Application.streamingAssetsPath}/save.json";
+        //_filePath = $"{Application.streamingAssetsPath}/save.json";
     }
     #region Save
     void GetDataToSave()
@@ -16,10 +16,10 @@ public class SaveAndLoad : MonoBehaviour
 
     }
 
-    void SaveJson(SaveData dataToSave, string pathToSaveTo)
-    {
+   //void SaveJson(SaveData dataToSave, string pathToSaveTo)
+   // {
 
-    }
+   // }
 
     public void Save()
     {
@@ -28,18 +28,18 @@ public class SaveAndLoad : MonoBehaviour
     #endregion
 
     #region Load
-    SaveData LoadData()
-    {
-        string loadedDataAsJson = File.ReadAllText(_filePath);
-        return JsonUtility.FromJson<SaveData>(loadedDataAsJson);
-    }
-    void SendDataToGame()
-    {
+    //SaveData LoadData()
+    //{
+        //string loadedDataAsJson = File.ReadAllText(_filePath);
+        //return JsonUtility.FromJson<SaveData>(loadedDataAsJson);
+    //}
+    //void SendDataToGame()
+    //{
 
-    }
-    public void Load()
-    {
+    //}
+    //public void Load()
+    //{
 
-    }
+    //}
     #endregion
 }
