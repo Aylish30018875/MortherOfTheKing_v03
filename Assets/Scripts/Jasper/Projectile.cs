@@ -1,0 +1,39 @@
+using UnityEngine;
+
+public class Projectile : MonoBehaviour
+{
+    public float speed = 8;
+    public Transform target;
+    private PointsManager pointsManager;
+    public int damageNumber = 1;
+
+    void Awake()
+    {
+        pointsManager = GameObject.FindGameObjectWithTag("Manager").GetComponent<PointsManager>();
+    }
+    private void Update()
+    {
+        if (target == null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Vector3 direction = (target.position - transform.position).normalized;
+        transform.position += direction * speed * Time.deltaTime;
+
+        float angle = Mathf.Atan2(direction.x, direction.y) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(0, 0, angle - 90);
+
+        if (Vector2.Distance(transform.position, target.position) < 0.15f)
+        {
+            Enemy e = target.GetComponent<Enemy>();
+            e.health -= damageNumber;
+            if (e.health <= 0)
+            {
+                Destroy(target.gameObject);
+                pointsManager.money += 5;
+            }
+            Destroy(gameObject);
+        }
+    }
+}
