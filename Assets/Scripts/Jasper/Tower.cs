@@ -10,6 +10,9 @@ public class Tower : MonoBehaviour
     public int damage;
     public float speed;
 
+    //Cost of the tower, used for purchasing and upgrading
+    public int cost = 10;
+
     private float fireCooldown;
 
     private void Update()

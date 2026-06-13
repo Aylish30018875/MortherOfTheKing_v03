@@ -2478,7 +2478,7 @@ MonoBehaviour:
   - {fileID: 1410510189}
   nonPlacementMaps:
   - {fileID: 628172355}
-  ghostPrefab: {fileID: 5528918398840118515, guid: 154e4b972c79fea4dbf090e912e209bd, type: 3}
+  ghostPrefab: {fileID: 5528918398840118515, guid: 709768f9888064d459fdb7281f4e98bd, type: 3}
 --- !u!4 &544748958
 Transform:
   m_ObjectHideFlags: 0
@@ -19052,6 +19052,7 @@ GameObject:
   - component: {fileID: 1935050165}
   - component: {fileID: 1935050164}
   - component: {fileID: 1935050163}
+  - component: {fileID: 1935050167}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -19109,7 +19110,7 @@ MonoBehaviour:
     buttonColour: 0
   _sliderHandler: {fileID: 1935050163}
   _audioMixer: {fileID: 0}
-  _dropDownManager: {fileID: 0}
+  _dropDownManager: {fileID: 1935050167}
   _filePath: assets/streamingassets
 --- !u!114 &1935050165
 MonoBehaviour:
@@ -19138,6 +19139,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1935050167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1935050162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6321d53697239314cbcdbb60de6475a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DropDownManager
+  textColourDropDown: {fileID: 0}
+  textSizeDropDown: {fileID: 0}
+  buttonColourDropDown: {fileID: 0}
+  textColour: 0
+  textSize: 0
+  buttonColour: 0
 --- !u!1 &1938134723
 GameObject:
   m_ObjectHideFlags: 0
