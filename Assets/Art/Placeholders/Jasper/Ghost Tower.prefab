@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1690447639386562610}
   - component: {fileID: -2954707427998818870}
   m_Layer: 0
-  m_Name: Assets_Tilemap_Decor_Pillar_v01_0
+  m_Name: Ghost Tower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
