@@ -12,7 +12,7 @@ public class Enemy : MonoBehaviour
 
     void Awake()
     {
-        healthManager = GameObject.FindGameObjectWithTag("Manager").GetComponent<HealthManager>();
+        healthManager = GameObject.FindGameObjectWithTag("HealthManager").GetComponent<HealthManager>();
     }
 
     private void Update()
@@ -31,8 +31,8 @@ public class Enemy : MonoBehaviour
             currentWayPoint++;
             if (currentWayPoint >= wayPoints.Length)
             {
-                Destroy(gameObject);
                 healthManager.lives -= 1;
+                Destroy(gameObject);
             }
         }
     }

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - AudioManager
   - Manager
+  - HealthManager
   layers:
   - Default
   - TransparentFX
@@ -42,6 +43,24 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Path
+    uniqueID: 2471720121
+    locked: 0
+  - name: Background
+    uniqueID: 1424240091
+    locked: 0
+  - name: Enemies
+    uniqueID: 988250181
+    locked: 0
+  - name: Middle
+    uniqueID: 2707210951
+    locked: 0
+  - name: Decor
+    uniqueID: 844499595
+    locked: 0
+  - name: Foreground
+    uniqueID: 2866695433
     locked: 0
   - name: Tower
     uniqueID: 4165698721
