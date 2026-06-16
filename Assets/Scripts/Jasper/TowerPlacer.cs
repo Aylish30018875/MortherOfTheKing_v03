@@ -21,7 +21,7 @@ public class TowerPlacer : MonoBehaviour
 
     //Reference to points manager for checking money
     private PointsManager pointsManager;
-
+    public static int price;
     void Awake()
     {
         //Find the points manager in the scene
@@ -98,7 +98,7 @@ public class TowerPlacer : MonoBehaviour
         Vector3Int cell = CellPosition();
 
         //Check if placement is valid and player has enough money
-        if (!IsValidPlacement(cell) || pointsManager.money < 10)
+        if (!IsValidPlacement(cell) || pointsManager.money < price)
         {
             //Invalid placement or not enough money, so ignore the click
             Debug.Log("Invalid placement or insufficient funds, cannot place tower.");
@@ -138,7 +138,7 @@ public class TowerPlacer : MonoBehaviour
         //Mark the cell as occupied by adding it to the set of occupied tiles, which will prevent future placements on the same cell until it is freed up (e.g. by selling the tower)
         _occupiedTiles.Add(cell);
         //Deduct the tower cost from the player's money
-        pointsManager.money -= 10;
+        pointsManager.money -= price;
     }
     /// <summary>
     /// Returns the placement tilemap that contains the given cell, or null if none do

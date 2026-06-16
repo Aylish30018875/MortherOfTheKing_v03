@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: daaff6b52a2b07645aaddeb5296c03b3
+guid: 5caf7ee5179b3b744ab376d51bf7621b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -554466515521702111
-    second: Assets_Towers_Unicorn_V01_0
-  - first:
-      213: 7473514563896037353
-    second: Assets_Towers_Unicorn_V01_1
+      213: 5428880479368989336
+    second: Tower_Tree_V2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,12 +46,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 750
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -99,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Assets_Towers_Unicorn_V01_0
+      name: Tower_Tree_V2_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 49
         y: 0
-        width: 602
-        height: 865
+        width: 492
+        height: 559
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,30 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 127fa7e44a32e48f0800000000000000
-      internalID: -554466515521702111
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Assets_Towers_Unicorn_V01_1
-      rect:
-        serializedVersion: 2
-        x: 282
-        y: 865
-        width: 48
-        height: 45
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9ef4bb446e147b760800000000000000
-      internalID: 7473514563896037353
+      spriteID: 89a47d45802475b40800000000000000
+      internalID: 5428880479368989336
       vertices: []
       indices: 
       edges: []
@@ -163,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -173,8 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Assets_Towers_Unicorn_V01_0: -554466515521702111
-      Assets_Towers_Unicorn_V01_1: 7473514563896037353
+      Tower_Tree_V2_0: 5428880479368989336
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

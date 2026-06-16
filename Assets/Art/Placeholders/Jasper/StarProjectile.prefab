@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6088888917681705288}
   - component: {fileID: 7761250180779846103}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: StarProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
