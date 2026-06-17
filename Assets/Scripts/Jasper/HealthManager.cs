@@ -11,5 +11,7 @@ public class HealthManager : MonoBehaviour
     {
         livesDisplayString = $"Lives: {lives}";
         livesDisplay.text = livesDisplayString;
+
+
     }
 }

@@ -25,6 +25,18 @@ public class WaveManager : MonoBehaviour
     [SerializeField] private int _currentWaveIndex = 0;
     [SerializeField] private bool _isRunning = false;
 
+    //Allows other scripts to check the current wave number
+    public int CurrentWaveIndex
+    {
+        get { return _currentWaveIndex; }
+    }
+
+    //Allows other scripts to check if a wave is currently running
+    public bool IsRunning
+    {
+        get { return _isRunning; }
+    }
+
     void Start()
     {
         startWaveButton.onClick.AddListener(StartWave);
