@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4db700ced69de34488171b5616ad909c
+guid: f77baec9051865e48b50f773fd15c219
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8899411640923494147
-    second: Tower_Dragon_V2_0
+      213: 7967517717185663954
+    second: Asset_Level01_Decor_01_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tower_Dragon_V2_0
+      name: Asset_Level01_Decor_01_0
       rect:
         serializedVersion: 2
-        x: 106
+        x: 0
         y: 0
-        width: 379
-        height: 568
+        width: 1131
+        height: 644
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: df867c08340fe7480800000000000000
-      internalID: -8899411640923494147
+      spriteID: 2d39b7a662f429e60800000000000000
+      internalID: 7967517717185663954
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Tower_Dragon_V2_0: -8899411640923494147
+      Asset_Level01_Decor_01_0: 7967517717185663954
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

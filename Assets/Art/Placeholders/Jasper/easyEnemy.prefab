@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   speed: 2
-  health: 1
+  health: 3
   wayPoints: []
   currentWayPoint: 0
   healthManager: {fileID: 0}
