@@ -14,6 +14,7 @@ public class GameDataToSave : MonoBehaviour
     }
     void Start()
     {
+        //Sets the save slot on start
         _saveSlotPath = $"{Application.streamingAssetsPath}/{_loadSaveSlotName.saveSlot.fileName}.json";
 
         Debug.Log(LoadData().currency);

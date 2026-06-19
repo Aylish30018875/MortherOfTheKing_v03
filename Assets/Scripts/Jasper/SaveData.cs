@@ -29,10 +29,14 @@ public class SaveData : MonoBehaviour
 
     public void SaveChosenSlot(string sN)
     {
+        //if theres a file already at the save slots path
         if (File.Exists(saveSlotPath))
         {
+            //
             slotName.fileName = sN;
+            //
             string lineToSave = JsonUtility.ToJson(slotName);
+            //write the save slot path and the json?????????
             File.WriteAllText(saveSlotPath, lineToSave);
         }
     }
