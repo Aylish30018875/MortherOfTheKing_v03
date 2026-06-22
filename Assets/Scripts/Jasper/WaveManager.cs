@@ -2,7 +2,6 @@ using UnityEngine;
 using System;
 using System.Collections;
 using UnityEngine.UI;
-using static UnityEngine.EventSystems.EventTrigger;
 
 [Serializable]
 public class WaveData
@@ -23,6 +22,8 @@ public class WaveData
 
 public class WaveManager : MonoBehaviour
 {
+    public Image nextEnemy;
+
     public WaveData[] waves;
     public Button startWaveButton;
 
@@ -75,8 +76,14 @@ public class WaveManager : MonoBehaviour
 
         WaveData wave = waves[_currentWaveIndex];
 
+        
+        
+
         for (int i = 0; i < wave.easyEnemies; i++)
         {
+            //for displaying the next enemy
+            nextEnemy.color = easyEnemyPrefab.GetComponent<Enemy>().enemyColor;
+
             SpawnEnemy(easyEnemyPrefab);
             yield return new WaitForSeconds((wave.duration / 3f) / wave.easyEnemies);
         
@@ -84,16 +91,25 @@ public class WaveManager : MonoBehaviour
         //trying some stuff :)
         for (int i = 0; i < wave.easyEnemiesGreen; i++)
         {
+            //for displaying the next enemy
+            nextEnemy.color = easyEnemyGreenPrefab.GetComponent<Enemy>().enemyColor;
+
             SpawnEnemy(easyEnemyGreenPrefab);
             yield return new WaitForSeconds((wave.duration / 3f) / wave.easyEnemiesGreen);
         }
         for (int i = 0; i < wave.easyEnemiesBlue; i++)
         {
+            //for displaying the next enemy
+            nextEnemy.color = easyEnemyBluePrefab.GetComponent<Enemy>().enemyColor;
+
             SpawnEnemy(easyEnemyBluePrefab);
             yield return new WaitForSeconds((wave.duration / 3f) / wave.easyEnemiesBlue);
         }
         for (int i = 0; i < wave.easyEnemiesPurple; i++)
         {
+            //for displaying the next enemy
+            nextEnemy.color = easyEnemyPurplePrefab.GetComponent<Enemy>().enemyColor;
+
             SpawnEnemy(easyEnemyPurplePrefab);
             yield return new WaitForSeconds((wave.duration / 3f) / wave.easyEnemiesPurple);
         }

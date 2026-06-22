@@ -72,6 +72,22 @@ PrefabInstance:
       propertyPath: reward
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 2177747937655681484, guid: 90f91b9f146ee2340967c2ecc3659caa, type: 3}
+      propertyPath: enemyColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2177747937655681484, guid: 90f91b9f146ee2340967c2ecc3659caa, type: 3}
+      propertyPath: enemyColor.b
+      value: 0.83137256
+      objectReference: {fileID: 0}
+    - target: {fileID: 2177747937655681484, guid: 90f91b9f146ee2340967c2ecc3659caa, type: 3}
+      propertyPath: enemyColor.g
+      value: 0.7764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 2177747937655681484, guid: 90f91b9f146ee2340967c2ecc3659caa, type: 3}
+      propertyPath: enemyColor.r
+      value: 0.6313726
+      objectReference: {fileID: 0}
     - target: {fileID: 7076914226001581819, guid: 90f91b9f146ee2340967c2ecc3659caa, type: 3}
       propertyPath: m_Name
       value: easyEnemy Variant Variant

@@ -36,6 +36,22 @@ PrefabInstance:
       propertyPath: reward
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 6394022896859815872, guid: c640d42d10f1bc54092fcc76c73c4784, type: 3}
+      propertyPath: enemyColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6394022896859815872, guid: c640d42d10f1bc54092fcc76c73c4784, type: 3}
+      propertyPath: enemyColor.b
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 6394022896859815872, guid: c640d42d10f1bc54092fcc76c73c4784, type: 3}
+      propertyPath: enemyColor.g
+      value: 0.8784314
+      objectReference: {fileID: 0}
+    - target: {fileID: 6394022896859815872, guid: c640d42d10f1bc54092fcc76c73c4784, type: 3}
+      propertyPath: enemyColor.r
+      value: 0.8352941
+      objectReference: {fileID: 0}
     - target: {fileID: 6499141929149224802, guid: c640d42d10f1bc54092fcc76c73c4784, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.44

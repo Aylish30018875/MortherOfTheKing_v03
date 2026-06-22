@@ -18277,8 +18277,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -796.9509, y: -168.43}
-  m_SizeDelta: {x: 322.8757, y: 121.55}
+  m_AnchoredPosition: {x: -817.5903, y: -168.43}
+  m_SizeDelta: {x: 281.597, y: 121.55}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &943424203
 MonoBehaviour:
@@ -18302,7 +18302,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: e08e6fb19dad59946adc38886bff4c45, type: 3}
-    m_FontSize: 100
+    m_FontSize: 85
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -24775,6 +24775,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea104eef52991c240bebc53c9e6655a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WaveManager
+  nextEnemy: {fileID: 0}
   waves:
   - duration: 5
     easyEnemies: 2

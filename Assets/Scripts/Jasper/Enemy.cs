@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
     public int currentWayPoint = 0;
     public DirectionWaypoint directionWaypoint;
     public HealthManager healthManager;
+    public Color enemyColor;
 
     void Awake()
     {
