@@ -45,10 +45,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e376147b58f5ca48bc12ead721687d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  speed: 2
+  speed: 1
+  reward: 5
   health: 3
   wayPoints: []
+  enemyAnimation: []
   currentWayPoint: 0
+  directionWaypoint: {fileID: 0}
   healthManager: {fileID: 0}
 --- !u!1 &9198548123526671221
 GameObject:

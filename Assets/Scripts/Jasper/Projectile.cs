@@ -30,8 +30,11 @@ public class Projectile : MonoBehaviour
             e.health -= damageNumber;
             if (e.health <= 0)
             {
+
+                pointsManager.money += e.reward;
+
                 Destroy(target.gameObject);
-                pointsManager.money += 5;
+                
             }
             Destroy(gameObject);
         }

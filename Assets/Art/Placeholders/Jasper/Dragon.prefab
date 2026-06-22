@@ -140,6 +140,6 @@ MonoBehaviour:
   fireRate: 6
   projectilePrefab: {fileID: 1262857479105472474, guid: 9b678b4f4743adc479dbb2500316b101, type: 3}
   firePoint: {fileID: 4168181074232465242}
-  damage: 8
-  speed: 6
+  damage: 6
+  speed: 3
   cost: 35

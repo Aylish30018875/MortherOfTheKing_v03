@@ -142,7 +142,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 1262857479105472474, guid: 9b678b4f4743adc479dbb2500316b101, type: 3}
   firePoint: {fileID: 7840949541759626498}
   damage: 3
-  speed: 4
+  speed: 3
   cost: 20
 --- !u!114 &6029211397538891688
 MonoBehaviour:
