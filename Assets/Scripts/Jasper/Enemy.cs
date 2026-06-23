@@ -12,6 +12,7 @@ public class Enemy : MonoBehaviour
     public DirectionWaypoint directionWaypoint;
     public HealthManager healthManager;
     public Color enemyColor = Color.white;
+    public int attackDamage;
 
     void Awake()
     {
@@ -53,7 +54,8 @@ public class Enemy : MonoBehaviour
             }
             if (currentWayPoint >= wayPoints.Length)
             {
-                healthManager.lives -= 1;
+                // healthManager.lives -= 1;
+                HealthManager.instance.TakeDamage(attackDamage);
                 Destroy(gameObject);
             }
         }

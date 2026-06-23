@@ -107,7 +107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e376147b58f5ca48bc12ead721687d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  speed: 2
+  speed: 1.4
   reward: 10
   health: 35
   wayPoints: []
@@ -115,6 +115,8 @@ MonoBehaviour:
   currentWayPoint: 0
   directionWaypoint: {fileID: 0}
   healthManager: {fileID: 0}
+  enemyColor: {r: 0, g: 0, b: 0, a: 0}
+  attackDamage: 1
 --- !u!1001 &5648652308211920492
 PrefabInstance:
   m_ObjectHideFlags: 0
