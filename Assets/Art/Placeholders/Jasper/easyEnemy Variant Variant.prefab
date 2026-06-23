@@ -62,11 +62,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2177747937655681484, guid: 90f91b9f146ee2340967c2ecc3659caa, type: 3}
       propertyPath: speed
-      value: 2
+      value: 1.3
       objectReference: {fileID: 0}
     - target: {fileID: 2177747937655681484, guid: 90f91b9f146ee2340967c2ecc3659caa, type: 3}
       propertyPath: health
-      value: 18
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 2177747937655681484, guid: 90f91b9f146ee2340967c2ecc3659caa, type: 3}
       propertyPath: reward

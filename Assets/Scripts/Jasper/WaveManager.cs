@@ -59,6 +59,8 @@ public class WaveManager : MonoBehaviour
     void Start()
     {
         startWaveButton.onClick.AddListener(StartWave);
+        //reset the colour to base :)
+        nextEnemy.color = Color.clear;
     }
 
     public void StartWave()
@@ -140,6 +142,7 @@ public class WaveManager : MonoBehaviour
         _currentWaveIndex++;
         _isRunning = false;
         startWaveButton.interactable = true;
+        nextEnemy.color = Color.clear;
     }
 
     void SpawnEnemy(GameObject prefab)

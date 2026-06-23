@@ -11,12 +11,12 @@ public class Enemy : MonoBehaviour
     public int currentWayPoint = 0;
     public DirectionWaypoint directionWaypoint;
     public HealthManager healthManager;
-    public Color enemyColor;
+    public Color enemyColor = Color.white;
 
     void Awake()
     {
         healthManager = GameObject.FindGameObjectWithTag("HealthManager").GetComponent<HealthManager>();
-        // enemyAnimation = transform.GetChild(0).GetComponent<EnemyAnimation>();
+      //  enemyAnimation = transform.GetChild(0).GetComponent<EnemyAnimation>();
         foreach (Transform childObject in GetComponentsInChildren<Transform>())
         {
             EnemyAnimation temp = childObject.GetComponent<EnemyAnimation>();
