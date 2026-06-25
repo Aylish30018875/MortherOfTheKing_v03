@@ -24620,18 +24620,8 @@ MonoBehaviour:
   hardEnemyGreenPrefab: {fileID: 8557247718035510316, guid: c6a26d3d1141b274b87a603afa801bde, type: 3}
   hardEnemyBluePrefab: {fileID: 2958359326086677662, guid: 9de94c2e011f2144b9db250f18be09c5, type: 3}
   hardEnemyPurplePrefab: {fileID: 1942841873727601659, guid: 804f60f0e504e794ba6377292e3092e4, type: 3}
-  wayPointParent: {fileID: 0}
-  wayPoints:
-  - {fileID: 1403103460}
-  - {fileID: 555807784}
-  - {fileID: 293456574}
-  - {fileID: 1209604523}
-  - {fileID: 1030353740}
-  - {fileID: 65429877}
-  - {fileID: 1850146676}
-  - {fileID: 1933625509}
-  - {fileID: 1336816625}
-  - {fileID: 670647938}
+  wayPointParent: {fileID: 1204505118}
+  wayPoints: []
   _currentWaveIndex: 0
   _isRunning: 0
 --- !u!4 &1408581495
