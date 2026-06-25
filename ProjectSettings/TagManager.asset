@@ -44,11 +44,11 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Path
-    uniqueID: 2471720121
-    locked: 0
   - name: Background
     uniqueID: 1424240091
+    locked: 0
+  - name: Path
+    uniqueID: 2471720121
     locked: 0
   - name: Enemies
     uniqueID: 988250181
