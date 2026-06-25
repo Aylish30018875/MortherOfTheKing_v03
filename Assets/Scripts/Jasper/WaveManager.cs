@@ -1,6 +1,7 @@
 using UnityEngine;
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.UI;
 
 [Serializable]
@@ -39,10 +40,23 @@ public class WaveManager : MonoBehaviour
     public GameObject hardEnemyBluePrefab;
     public GameObject hardEnemyPurplePrefab;
 
+    public Transform wayPointParent;
     public Transform[] wayPoints;
 
     [SerializeField] private int _currentWaveIndex = 0;
     [SerializeField] private bool _isRunning = false;
+
+
+    private void Awake()
+    {
+        List<Transform> temp = new List<Transform>();
+        foreach (Transform t in wayPointParent.GetComponentsInChildren<Transform>())
+        {
+            temp.Add(t);
+        }
+        temp.RemoveAt(0);
+       wayPoints = temp.ToArray();
+    }
 
     //Allows other scripts to check the current wave number
     public int CurrentWaveIndex
