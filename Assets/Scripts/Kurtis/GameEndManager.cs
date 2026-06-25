@@ -1,7 +1,11 @@
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
+using UnityEngine.UI;
 
 public class GameEndManager : MonoBehaviour
 {
+    float timer;
+    public static int score = 0;
     //References the health manager script so it can check the lives variable
     public HealthManager healthManager;
 
@@ -9,8 +13,12 @@ public class GameEndManager : MonoBehaviour
     public WaveManager waveManager;
 
     //Panels that will show when the player wins or loses
-    public GameObject youLosePanel;
-    public GameObject youWinPanel;
+    public GameObject gamOverPanel;
+    public Text panelTitle;
+    public Text gameTimer;
+    public Text gameScore;
+    public Text gameLives;
+   // public GameObject youWinPanel;
 
     //Amount of waves needed before the player wins
     public int wavesToWin = 2;
@@ -20,10 +28,10 @@ public class GameEndManager : MonoBehaviour
     void Start()
     {
         //Hides both panels when the game starts
-        youLosePanel.SetActive(false);
-        youWinPanel.SetActive(false);
+        gamOverPanel.SetActive(false);
         //Makes sure the game is running at normal speed
         Time.timeScale = 1f;
+        score = 0; 
     }
 
     void Update()
@@ -41,29 +49,36 @@ public class GameEndManager : MonoBehaviour
         }
 
         //If the player has completed enough waves and a wave is not currently running, run the win game function
-        if (waveManager.CurrentWaveIndex >= wavesToWin && waveManager.IsRunning == false)
+        if (waveManager.CurrentWaveIndex >= wavesToWin && waveManager.IsRunning == false && FindObjectsByType<Enemy>(FindObjectsInactive.Include,FindObjectsSortMode.None).Length == 0)
         {
             WinGame();
         }
     }
-
-    void LoseGame()
+    void EndGame()
     {
+        timer = Time.timeSinceLevelLoad;
+        int minutes = (int)(Time.timeSinceLevelLoad / 60);
+        int seconds = (int)(Time.timeSinceLevelLoad % 60);
+        string display = $"{minutes:00}:{seconds:00}";
+        gameTimer.text = $"Time: {display}";
+        gameScore.text = $"Score: {score}";
+        gameLives.text = $"Lives: {healthManager.lives}";
         //Marks the game as ended
         gameEnded = true;
         //Shows the lose panel
-        youLosePanel.SetActive(true);
+        gamOverPanel.SetActive(true);
         //Pauses the game
         Time.timeScale = 0f;
+    }
+    void LoseGame()
+    {
+        panelTitle.text = $"You Lost";
+        EndGame();
     }
 
     void WinGame()
     {
-        //Marks the game as ended
-        gameEnded = true;
-        //Shows the win panel
-        youWinPanel.SetActive(true);
-        //Pauses the game
-        Time.timeScale = 0f;
+        panelTitle.text = $"You Won";
+        EndGame();
     }
 }

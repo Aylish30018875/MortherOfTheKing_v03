@@ -32,6 +32,7 @@ public class Projectile : MonoBehaviour
             {
 
                 pointsManager.money += e.reward;
+                GameEndManager.score ++;
 
                 Destroy(target.gameObject);
                 

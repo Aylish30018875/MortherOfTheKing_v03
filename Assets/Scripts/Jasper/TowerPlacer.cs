@@ -10,7 +10,7 @@ public class TowerPlacer : MonoBehaviour
     //Tilemaps for placeable and blocked tiles
     public Tilemap[] placementMaps;
     public Tilemap[] nonPlacementMaps;
-
+    public PhysicsRaycaster camCast;
     //Preview of tower before placement
     public GameObject ghostPrefab;
 
@@ -26,6 +26,7 @@ public class TowerPlacer : MonoBehaviour
     {
         //Find the points manager in the scene
         pointsManager = GameObject.FindGameObjectWithTag("Manager").GetComponent<PointsManager>();
+        camCast = Camera.main.GetComponent<PhysicsRaycaster>();
     }
 
     private void Update()
@@ -48,6 +49,7 @@ public class TowerPlacer : MonoBehaviour
                 Destroy(_ghostInstance);
                 _ghostInstance = null;
             }
+            camCast.enabled = true;
             return;
         }
         //Create the ghost tower if it doesn't exist
@@ -65,7 +67,9 @@ public class TowerPlacer : MonoBehaviour
         worldCenter.z = 0;
 
         //Position the ghost tower slightly above the cell center for better visibility
-        _ghostInstance.transform.position = worldCenter + new Vector3(0, PrimaryPlacementMap().cellSize.y * 0.83f);
+        // _ghostInstance.transform.position = worldCenter + new Vector3(0, PrimaryPlacementMap().cellSize.y * 0.83f);
+         _ghostInstance.transform.position = worldCenter + new Vector3(0, PrimaryPlacementMap().cellSize.y * .60f);
+
         //Set ghost tower colour based on placement validity
         _ghostInstance.GetComponent<GhostTower>().SetValid(IsValidPlacement(cell));
     }

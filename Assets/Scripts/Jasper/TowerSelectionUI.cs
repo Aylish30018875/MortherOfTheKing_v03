@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class TowerSelectionUI : MonoBehaviour
@@ -7,10 +8,13 @@ public class TowerSelectionUI : MonoBehaviour
     public Button purchaseButton;
     public int price = 0;
     public PointsManager moneyManager;
+    public PhysicsRaycaster camCast;
 
     private void Start()
     {
         moneyManager = GameObject.FindGameObjectWithTag("Manager").GetComponent<PointsManager>();
+        camCast = Camera.main.GetComponent<PhysicsRaycaster>();
+
     }
     private void Update()
     {
@@ -38,11 +42,15 @@ public class TowerSelectionUI : MonoBehaviour
     {
         if (towerPrefab == selectedTowerPrefab)
         {
+
             selectedTowerPrefab = null;
+            camCast.enabled = true;
             TowerPlacer.price = 0;
             return;
         }
         TowerPlacer.price = price;
         selectedTowerPrefab = towerPrefab;
+        camCast.enabled = false;
+
     }
 }

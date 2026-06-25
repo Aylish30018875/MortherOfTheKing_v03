@@ -1,19 +1,38 @@
-using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class Tower : MonoBehaviour
+public class Tower : MonoBehaviour, IPointerClickHandler
 {
-    public float range = 3;
-    public float fireRate = 1;
-    public GameObject projectilePrefab;
-    public Transform firePoint;
-    public int damage;
-    public float speed;
-
+    [Header("Tower")]
     //Cost of the tower, used for purchasing and upgrading
-    public int cost = 10;
+    [Tooltip("Cost of the Tower")] public int cost = 10;
+    [Tooltip("Tower Attack Range")] public float range = 3;
+
+    [Header("Projectile")]
+    [Tooltip("Bullet")] public GameObject projectilePrefab;
+    [Tooltip("Spawn Point of Bullet")] public Transform firePoint;
+    [Tooltip("Damage that Bullet Does")] public int damage;
+    [Tooltip("Projectile Speed")] public float speed;
+
+
+    [Header("Tower Fire Rate Upgrade")]
+    [Tooltip("Tower Fire Rate Per Second")] public float fireRate = 1;
+    [Tooltip("Price to Upgrade the Fire Rate")] public int fireRateCost = 10;
+    [Tooltip("After Purchace how much does the price increase by")] public int fireRateCostIncrease = 10;
+    [Tooltip("The amount that the damage increases by")] public int fireRateIncrease = 1;
 
     private float fireCooldown;
+    public int timesUpgradedFireRate = 0;
+
+    [Header("Tower Damage Upgrade")]
+    [Tooltip("Price to Upgrade the damage")] public int damageCost = 10;
+    [Tooltip("After Purchace how much does the price increase by")] public int damageCostIncrease = 10;
+    [Tooltip("The amount that the damage increases by")] public int damageIncrease = 10;
+    public int timesUpgradedDamage = 0;
+
+
+
 
     private void Update()
     {
@@ -24,6 +43,19 @@ public class Tower : MonoBehaviour
             Shoot(target);
             fireCooldown = 1 / fireRate;
         }
+    }
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        if (eventData.button == 0)
+        {
+            OnInteracted();
+        }
+       
+    }
+    void OnInteracted()
+    {
+        Debug.Log("Test Interaction");
+        UpgradeManager.upgradeManager.OpenUpgrades(this);
     }
     Enemy FindBestTarget()
     {

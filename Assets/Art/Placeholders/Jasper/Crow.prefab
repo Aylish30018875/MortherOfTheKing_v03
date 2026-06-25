@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7703357279404756727}
   - component: {fileID: 6989158108062479994}
   - component: {fileID: -505713640078700981}
+  - component: {fileID: 9138634225254672377}
   m_Layer: 0
   m_Name: Crow
   m_TagString: Untagged
@@ -105,13 +106,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 309c7e4d63485a349a84325e3d1c2d23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Tower
+  cost: 25
   range: 3
-  fireRate: 4
-  projectilePrefab: {fileID: 1262857479105472474, guid: 9b678b4f4743adc479dbb2500316b101, type: 3}
+  projectilePrefab: {fileID: 3523155936326052587, guid: b303945a610e278449945e2adb1df269, type: 3}
   firePoint: {fileID: 8223041244777123444}
   damage: 4
   speed: 3
-  cost: 25
+  fireRate: 4
+  fireRateCost: 20
+  fireRateCostIncrease: 15
+  fireRateIncrease: 4
+  timesUpgradedFireRate: 0
+  damageCost: 20
+  damageCostIncrease: 20
+  damageIncrease: 4
+  timesUpgradedDamage: 0
+--- !u!65 &9138634225254672377
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5665748410216807107}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 5.150656, y: 5.734133, z: 0.20000002}
+  m_Center: {x: 0.024978518, y: -0.45793706, z: 0}
 --- !u!1 &6011462562137040934
 GameObject:
   m_ObjectHideFlags: 0

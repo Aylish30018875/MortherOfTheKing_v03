@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 3632470669074491734}
   - component: {fileID: 6589995729810585448}
   - component: {fileID: 8111414384227869735}
+  - component: {fileID: 33799269282679531}
   m_Layer: 0
   m_Name: Dragon
   m_TagString: Untagged
@@ -136,10 +137,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 309c7e4d63485a349a84325e3d1c2d23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Tower
+  cost: 35
   range: 4
-  fireRate: 7
   projectilePrefab: {fileID: 1262857479105472474, guid: 9b678b4f4743adc479dbb2500316b101, type: 3}
   firePoint: {fileID: 4168181074232465242}
   damage: 7
   speed: 3
-  cost: 35
+  fireRate: 7
+  fireRateCost: 30
+  fireRateCostIncrease: 20
+  fireRateIncrease: 7
+  timesUpgradedFireRate: 0
+  damageCost: 30
+  damageCostIncrease: 30
+  damageIncrease: 5
+  timesUpgradedDamage: 0
+--- !u!65 &33799269282679531
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7569354551980524793}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.0349574, y: 5.7840877, z: 0.20000002}
+  m_Center: {x: 0.016651899, y: -0.4329583, z: 0}
