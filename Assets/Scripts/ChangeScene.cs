@@ -4,11 +4,18 @@ using UnityEngine.SceneManagement;
 
 public class ChangeScene : MonoBehaviour
 {
+    string selectedScene = "Level1";
     public void ChangeSceneByName(string sceneName)
     {
         Debug.Log("Scene changed");
         //connect loading scenes in Unity Engine using their name
         SceneManager.LoadScene(sceneName);
+    }
+    public void ChangeSceneByName()
+    {
+        Debug.Log("Scene changed");
+        //connect loading scenes in Unity Engine using their name
+        SceneManager.LoadScene(selectedScene);
     }
     public void SceneIndexDrop(int drop)
     {
@@ -16,19 +23,19 @@ public class ChangeScene : MonoBehaviour
         switch (drop)
         {
             case 0:
-                sceneName = "Before the Walls";
+                sceneName = "Level1";
                 break;
             case 1:
-                sceneName = "The Gardens";
+                sceneName = "Level2";
                 break;
             case 2:
-                sceneName = "Castle Halls";
+                sceneName = "Level3";
                 break;
             default:
-                sceneName = "Before the Walls";
+                sceneName = "Level1";
                 break;
         }
-        SceneManager.LoadScene(sceneName);
+        selectedScene = sceneName;
 
     }
     //public void LoadSaveYes()

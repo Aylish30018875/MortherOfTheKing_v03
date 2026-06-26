@@ -21,13 +21,13 @@ EditorBuildSettings:
     path: Assets/Scenes/Jasper/SavingLoading.unity
     guid: e27b0c404a1077c439440ebe809be8c3
   - enabled: 1
-    path: Assets/Scenes/Jasper/Before the Walls.unity
+    path: Assets/Scenes/Jasper/Level1.unity
     guid: 3cac1c1892d027d46be235f30c8ed687
   - enabled: 1
-    path: Assets/Scenes/Jasper/The Gardens.unity
+    path: Assets/Scenes/Jasper/Level2.unity
     guid: d45f6939628b15c42b9061869619feb4
   - enabled: 1
-    path: Assets/Scenes/Jasper/Castle Halls.unity
+    path: Assets/Scenes/Jasper/Level3.unity
     guid: d0e451a5418ae034fa2c8b0dcc38c493
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
