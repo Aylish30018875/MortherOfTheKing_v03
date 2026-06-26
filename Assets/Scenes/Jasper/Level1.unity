@@ -24606,11 +24606,11 @@ MonoBehaviour:
     easyEnemies: 1
     easyEnemiesGreen: 2
     easyEnemiesBlue: 4
-    easyEnemiesPurple: 8
-    hardEnemies: 16
-    hardEnemiesGreen: 20
-    hardEnemiesBlue: 24
-    hardEnemiesPurple: 28
+    easyEnemiesPurple: 5
+    hardEnemies: 8
+    hardEnemiesGreen: 10
+    hardEnemiesBlue: 7
+    hardEnemiesPurple: 4
   startWaveButton: {fileID: 747722698}
   easyEnemyPrefab: {fileID: 2644444464487004407, guid: c640d42d10f1bc54092fcc76c73c4784, type: 3}
   easyEnemyGreenPrefab: {fileID: 7076914226001581819, guid: 90f91b9f146ee2340967c2ecc3659caa, type: 3}
