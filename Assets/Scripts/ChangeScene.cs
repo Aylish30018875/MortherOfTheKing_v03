@@ -1,3 +1,4 @@
+using Unity.VectorGraphics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,6 +9,27 @@ public class ChangeScene : MonoBehaviour
         Debug.Log("Scene changed");
         //connect loading scenes in Unity Engine using their name
         SceneManager.LoadScene(sceneName);
+    }
+    public void SceneIndexDrop(int drop)
+    {
+        string sceneName = "";
+        switch (drop)
+        {
+            case 0:
+                sceneName = "Before the Walls";
+                break;
+            case 1:
+                sceneName = "The Gardens";
+                break;
+            case 2:
+                sceneName = "Castle Halls";
+                break;
+            default:
+                sceneName = "Before the Walls";
+                break;
+        }
+        SceneManager.LoadScene(sceneName);
+
     }
     //public void LoadSaveYes()
     //{

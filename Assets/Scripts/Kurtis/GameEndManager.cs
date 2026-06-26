@@ -25,6 +25,10 @@ public class GameEndManager : MonoBehaviour
     //Prevents the win or loss code from running more than once
     private bool gameEnded = false;
 
+    //Access retry/next buttons
+    public Button retryButton;
+    public Button nextLevelButton;
+
     void Start()
     {
         //Hides both panels when the game starts
@@ -72,12 +76,20 @@ public class GameEndManager : MonoBehaviour
     }
     void LoseGame()
     {
+        //Turn on "Retry" button
+        retryButton.gameObject.SetActive(true);
+        //Turn off "Next Level" button
+        nextLevelButton.gameObject.SetActive(false);
         panelTitle.text = $"You Lost";
         EndGame();
     }
 
     void WinGame()
     {
+        //Turn off "Retry" button
+        retryButton.gameObject.SetActive(false);
+        //Turn on "Next Level" button
+        nextLevelButton.gameObject.SetActive(true);
         panelTitle.text = $"You Won";
         EndGame();
     }
